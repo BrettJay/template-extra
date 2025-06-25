@@ -3,6 +3,10 @@ name: "Bash Parallel Example"
 description: "An parallel example repository you can use as a test project with Buildkite"
 # An optional field corresponding to a publicly visible demo build
 demo: "catalino-sandbox/demokite"
+plugins:
+  - "buildkite-plugins/monorepo-diff-buildkite-plugin"
+  - "buildkite-plugins/plugin-linter-buildkite-plugin"
+  - "buildkite-plugins/buildkite-plugin-tester"
 steps:
   - command: "buildkite-agent pipeline upload"
     label: ":pipeline:"
